@@ -149,15 +149,15 @@ var cssTask = function (options) {
 gulp.task('default', function () {
 
     browserifyTask({
-        development: true,
+        development: false,
         src: './app/main.js',
-        dest: './build'
+        dest: '../src/main/resources/static'
     });
 
     cssTask({
-        development: true,
+        development: false,
         src: './styles/**/*.css',
-        dest: './build'
+        dest: '../src/main/resources/static'
     });
 
 });

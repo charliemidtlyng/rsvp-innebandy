@@ -50,6 +50,7 @@ var routes = (
                     <IndexRoute name="home" component={VisibleEventList}/>
                     <Route path="event/new" component={NewEvent}/>
                     <Route path="event/import" component={ImportEvents}/>
+                    <Route path="event/matches" component={NotFound}/>
                     <Route path="event/:id" component={VisibleEvent.default}/>
                     <Route path="event/:id/lineup" component={EventLineup}/>
                     <Route path="*" component={NotFound}/>

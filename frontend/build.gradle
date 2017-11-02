@@ -1,0 +1,29 @@
+repositories {
+    mavenCentral()
+}
+    
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "com.moowork.gradle:gradle-node-plugin:1.2.0"
+
+    }
+}
+
+
+apply plugin: "com.moowork.gulp"
+apply plugin: 'java'
+
+// run npm install
+gulp_default.dependsOn 'npmInstall'
+
+// run gulp install
+gulp_default.dependsOn 'installGulp'
+
+// processResources is a Java task. Run the gulpfile.js before this task using the 'default' task in the gulpfile.js
+processResources.dependsOn gulp_default
