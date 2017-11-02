@@ -11,12 +11,14 @@ buildscript {
     }
     dependencies {
         classpath "com.moowork.gradle:gradle-node-plugin:1.2.0"
+        classpath "com.moowork.node:gradle-node-plugin:1.2.0"
 
     }
 }
 
 
 apply plugin: "com.moowork.gulp"
+apply plugin: "com.moowork.node"
 apply plugin: 'java'
 
 // run npm install
