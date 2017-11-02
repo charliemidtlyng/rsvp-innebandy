@@ -16,8 +16,8 @@ apply plugin: 'spring-boot'
 
 jar {
     group = 'no.charlie'
-    baseName = 'rsvp-app'
-    version = '1.0.100'
+    baseName = 'application'
+    version = ''
 }
 
 mainClassName = "no.charlie.rsvp.Application"
