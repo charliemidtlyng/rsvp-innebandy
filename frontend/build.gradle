@@ -26,5 +26,14 @@ gulp_default.dependsOn 'npmInstall'
 // run gulp install
 gulp_default.dependsOn 'installGulp'
 
+
 // processResources is a Java task. Run the gulpfile.js before this task using the 'default' task in the gulpfile.js
 processResources.dependsOn gulp_default
+
+node {
+    version = '6.9.5' // Version of node to use.
+    npmVersion = '3.10.10'
+    distBaseUrl = 'https://nodejs.org/dist' // Base URL for fetching node distributions (change if you have a mirror).
+    download = true // Download node using above parameters.
+    nodeModulesDir = file("${project.projectDir}") // Set the work directory where node_modules should be located
+}
