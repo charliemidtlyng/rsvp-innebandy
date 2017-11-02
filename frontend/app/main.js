@@ -2,11 +2,12 @@ import regeneratorRuntime from "regenerator-runtime";
 window.regeneratorRuntime = regeneratorRuntime;
 var React = require('react');
 var ReactDOM = require('react-dom');
-var EventStore = require('./EventStore');
 var NewEvent = require('./NewEvent');
 var ImportEvents = require('./import/ImportEvents');
 
 var VisibleEvent = require('./event/visibleEvent');
+var TournamentList = require('./tournament/tournamentList');
+var Tournament = require('./tournament/tournament');
 var EventLineup = require('./EventLineup');
 var App = require('./App')
 import {Router, Route, IndexRoute, hashHistory} from 'react-router'
@@ -50,7 +51,8 @@ var routes = (
                     <IndexRoute name="home" component={VisibleEventList}/>
                     <Route path="event/new" component={NewEvent}/>
                     <Route path="event/import" component={ImportEvents}/>
-                    <Route path="event/matches" component={NotFound}/>
+                    <Route path="matches" component={TournamentList.default}/>
+                    <Route path="matches/:id" component={Tournament.default}/>
                     <Route path="event/:id" component={VisibleEvent.default}/>
                     <Route path="event/:id/lineup" component={EventLineup}/>
                     <Route path="*" component={NotFound}/>

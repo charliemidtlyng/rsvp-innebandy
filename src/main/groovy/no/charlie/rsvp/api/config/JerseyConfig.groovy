@@ -2,6 +2,7 @@ package no.charlie.rsvp.api.config
 
 import no.charlie.rsvp.api.AdminResource
 import no.charlie.rsvp.api.EventResource
+import no.charlie.rsvp.api.TournamentResource
 import org.glassfish.jersey.server.ResourceConfig
 import org.springframework.stereotype.Component
 
@@ -17,6 +18,7 @@ class JerseyConfig extends ResourceConfig {
     JerseyConfig() {
         register JsonFeature
         register EventResource
+        register TournamentResource
         register AdminResource
     }
 

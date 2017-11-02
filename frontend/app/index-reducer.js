@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux'
 import events from './events/reducer'
 import event from './event/reducer'
+import tournaments from './tournament/reducer'
 
- const IndexReducer = combineReducers({
+const IndexReducer = combineReducers({
   events,
-  event
-})
+  event,
+  tournaments
+});
 
 export default IndexReducer

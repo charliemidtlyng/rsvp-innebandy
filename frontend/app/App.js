@@ -21,7 +21,7 @@ var App = React.createClass({
                             <NavItem key={1} href="/#">Hendelser</NavItem>
                             <NavItem key={2} href="#/event/new">Ny hendelse</NavItem>
                             <NavItem key={3} href="#/event/import">Importere kamper</NavItem>
-                            <NavItem key={4} href="#/event/matches">Tabell</NavItem>
+                            <NavItem key={4} href="#/matches">Tabell</NavItem>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
