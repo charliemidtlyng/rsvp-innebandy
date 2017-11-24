@@ -161,7 +161,7 @@ var Event = React.createClass({
                         <div><strong>Påmeldt:</strong> {event.participants.length} / {event.maxNumber}</div>
                         <div><button className="btn btn-default btn-xs " onClick={this.downloadICalendar}>Lagre i kalender</button></div>
                         <div>
-                            <button className="btn btn-danger btn-xs" onClick={this.deleteEvent}>Slett hendelse</button> || <button className="btn btn-warning btn-xs" onClick={this.sendSlackNotification}>Send slack-melding</button> || <button className="btn btn-warning btn-xs" onClick={this.sendMailNotification}>Send epost</button>
+                            <button className="btn btn-danger btn-xs" onClick={this.deleteEvent}>Slett hendelse</button> || <button className="btn btn-warning btn-xs" onClick={this.sendSlackNotification}>Send slack-melding</button>
                         </div>
                     </div>
                     <div className="event event-with-padding">

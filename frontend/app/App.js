@@ -12,7 +12,7 @@ var App = React.createClass({
                 <Navbar fixedTop={true} >
                     <Navbar.Header>
                         <Navbar.Brand>
-                            <a href="#"><img src="/css/fotball_logo.png" /></a>
+                            <a href="#"></a>
                         </Navbar.Brand>
                         <Navbar.Toggle />
                     </Navbar.Header>
@@ -20,8 +20,6 @@ var App = React.createClass({
                         <Nav eventKey={1}>
                             <NavItem key={1} href="/#">Hendelser</NavItem>
                             <NavItem key={2} href="#/event/new">Ny hendelse</NavItem>
-                            <NavItem key={3} href="#/event/import">Importere kamper</NavItem>
-                            <NavItem key={4} href="#/matches">Tabell</NavItem>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>

@@ -4,8 +4,6 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize
 import no.charlie.rsvp.domain.Annotations.*
 import org.joda.time.DateTime
 import org.joda.time.DateTimeZone
-import org.joda.time.Days
-import org.joda.time.Seconds
 import org.joda.time.format.DateTimeFormat
 import org.joda.time.format.DateTimeFormatter
 
@@ -14,7 +12,7 @@ import javax.persistence.Transient
 
 import static no.charlie.rsvp.domain.Event.EventSubType.Match
 import static no.charlie.rsvp.domain.Event.EventSubType.Training
-import static no.charlie.rsvp.domain.Event.EventType.Football
+import static no.charlie.rsvp.domain.Event.EventType.Innebandy
 /**
  * @author Charlie Midtlyng (charlie.midtlyng@BEKK.no)
  */
@@ -26,7 +24,7 @@ class Event {
     @PDateTime DateTime regStart
     @PDateTime DateTime regEnd
 
-    @PEnum EventType eventType = Football
+    @PEnum EventType eventType = Innebandy
     @PEnum EventSubType eventSubType = Training
 
     String creator
@@ -72,9 +70,9 @@ class Event {
         return """\
                BEGIN:VCALENDAR
                VERSION:2.0
-               PRODID:-//BEKK//BEKK Fotball//NO
+               PRODID:-//BEKK//BEKK Innebandy//NO
                BEGIN:VEVENT
-               UID:$id@rsvp-app
+               UID:$id@rsvp-innebandy
                DTSTAMP;TZID=Europe/Oslo:${dt.print(DateTime.now().withZone(tz))}
                DTSTART;TZID=Europe/Oslo:${dt.print(startTime.withZone(tz))}
                DTEND;TZID=Europe/Oslo:${dt.print(endTime.withZone(tz))}
@@ -85,7 +83,7 @@ class Event {
     }
 
     public static enum EventType {
-        Football
+        Innebandy
     }
 
     public static enum EventSubType {
