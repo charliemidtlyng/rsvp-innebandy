@@ -899,8 +899,8 @@ var Event = React.createClass({
         this.props.fetchEventById(this.props.params.id);
     },
     deleteEvent: function deleteEvent() {
-        var luckyNumber = prompt("Er du helt sikker på at du vil slette denne hendelsen? \n I så fall - hvilket draktnummer har Charlie");
-        if (luckyNumber && parseInt(luckyNumber) === 7) {
+        var luckyString = prompt("Er du helt sikker på at du vil slette denne hendelsen? \n Hvordan signaliserte du tidligere at du var påmeldt innebandytrening?");
+        if (luckyString === '.J') {
             EventStore.removeEvent(this.props.event.currentEvent.id);
             window.location.hash = '';
         }
