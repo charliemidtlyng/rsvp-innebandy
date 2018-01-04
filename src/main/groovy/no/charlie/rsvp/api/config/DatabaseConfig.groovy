@@ -24,11 +24,16 @@ class DatabaseConfig {
 
 
             LOGGER.info("----- Setting up datasource ---- " )
-            String dbName = System.getenv("RDS_DB_NAME")
-            String username = System.getenv("RDS_USERNAME")
-            String password = System.getenv("RDS_PASSWORD")
-            String hostname = System.getenv("RDS_HOSTNAME")
-            String port = System.getenv("RDS_PORT")
+            String dbName = System.getenv("RDS_DB_NAME_F")
+            String username = System.getenv("RDS_USERNAME_F")
+            String password = System.getenv("RDS_PASSWORD_F")
+            String hostname = System.getenv("RDS_HOSTNAME_F")
+            String port = System.getenv("RDS_PORT_F")
+//            String dbName = System.getenv("RDS_DB_NAME")
+//            String username = System.getenv("RDS_USERNAME")
+//            String password = System.getenv("RDS_PASSWORD")
+//            String hostname = System.getenv("RDS_HOSTNAME")
+//            String port = System.getenv("RDS_PORT")
 
             String dbUrl = "jdbc:postgresql://" + hostname + ":" + port + "/" + dbName + "?user=" + username + "&password=" + password
 
