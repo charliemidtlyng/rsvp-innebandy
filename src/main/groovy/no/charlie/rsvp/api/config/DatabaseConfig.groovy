@@ -34,7 +34,8 @@ class DatabaseConfig {
 //            String password = System.getenv("RDS_PASSWORD")
 //            String hostname = System.getenv("RDS_HOSTNAME")
 //            String port = System.getenv("RDS_PORT")
-
+            LOGGER.info(username)
+            LOGGER.info(hostname)
             String dbUrl = "jdbc:postgresql://" + hostname + ":" + port + "/" + dbName + "?user=" + username + "&password=" + password
 
             BasicDataSource basicDataSource = new BasicDataSource()
