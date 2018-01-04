@@ -1,7 +1,7 @@
 {
-  "name": "rsvp-app",
+  "name": "rsvp-innebandy",
   "version": "0.1.0",
-  "description": "RSVP application - react",
+  "description": "RSVP innebandy - react",
   "author": "Charlie Midtlyng",
   "license": "MIT",
   "devDependencies": {
